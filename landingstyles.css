@@ -1,0 +1,242 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cfe0ff;
+}
+
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+header {
+    background: #092657;
+    color: #fff;
+    padding: 5px 0;
+    border-bottom: #095716 8px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+header .logo {
+    margin-left: 20px;
+}
+header .logo img {
+    max-width: 100px;
+    height: auto;
+}
+header h1 {
+    flex: 1;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 24px;
+}
+.main-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px 0;
+    box-shadow: 1px 1px 10px  #000000;
+    border-radius: 5px;
+
+}
+.main-carousel img {
+    width: 100%;
+    height: auto;
+    display: none;
+    border-radius: 5px;
+}
+.main-carousel img.active {
+    display: block;
+}
+.main-carousel .controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.main-carousel .controls span {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.description-text {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px  #000000;
+}
+
+.project {
+    background: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border: #ccc 1px solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 10px  #000000;
+    color: #0056b3;
+}
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.project h2 {
+    margin-top: 10px;
+    font-size: 40px;
+    text-align: center;
+}
+.project .description {
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    position: relative;
+}
+.project .description::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(transparent, white);
+    display: block;
+}
+.project .description.expanded {
+    max-height: none;
+}
+.project .description.expanded::after {
+    display: none;
+}
+.project .toggle-btn {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+}
+.carousel img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: none;
+}
+.carousel img.active {
+    display: block;
+}
+.carousel .controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.carousel .controls span {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+.video-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+}
+.video-container iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+footer {
+    background: #092657;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    border-radius: 5px;
+}
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.footer-section {
+    margin: 10px 0;
+}
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.footer-section p, .footer-section a {
+    margin: 5px 0;
+    color: #fff;
+    text-decoration: none;
+}
+.social-links a {
+    margin: 0 10px;
+}
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 3px solid #fff;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .project {
+        flex: 1 1 calc(50% - 40px);
+        margin: 20px;
+        align-items: flex-start;
+    }
+    .project img {
+        max-width: 100%;
+    }
+    .project h2, .project p {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .project {
+        flex: 1 1 calc(33% - 40px);
+    }
+}
